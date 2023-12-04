@@ -883,7 +883,7 @@ function px(value) {
 }
 
 var _templateObject$3;
-var Styles$2 = styled.div(_templateObject$3 || (_templateObject$3 = _taggedTemplateLiteral(["\n    position: absolute;\n    background: rgba(110, 136, 255, 0.8);\n    border: 1px solid rgb(192 206 212 / 60%);\n"])));
+var Styles$2 = styled.div(_templateObject$3 || (_templateObject$3 = _taggedTemplateLiteral(["\n    position: absolute;\n    background: #7C43C5;\n    border: 1px solid #7C43C5;\n"])));
 function MiniNode(props) {
   return /*#__PURE__*/React.createElement(Styles$2, {
     style: {
@@ -897,7 +897,7 @@ function MiniNode(props) {
 }
 
 var _templateObject$2;
-var MiniViewportStyles = styled.div(_templateObject$2 || (_templateObject$2 = _taggedTemplateLiteral(["\n  position: absolute;\n  background: rgba(255, 251, 128, 0.32);\n  border: 1px solid #ffe52b;\n"])));
+var MiniViewportStyles = styled.div(_templateObject$2 || (_templateObject$2 = _taggedTemplateLiteral(["\n  position: absolute;\n  background: #090E2CCC;\n  border: 1px solid #121D64;\n"])));
 function MiniViewport(props) {
   var scale = function scale(v) {
     return v * props.containerWidth;
@@ -926,7 +926,7 @@ function MiniViewport(props) {
 }
 
 var _templateObject$1;
-var Styles$1 = styled.div(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral(["\n    position: absolute;\n    right: 24px;\n    bottom: 24px;\n    background: rgba(255, 0, 0, 0.65);\n    padding: 20px;\n    overflow: hidden;\n    border: 1px solid #b1b7ff;\n    border-radius: 8px;\n    box-sizing: border-box;\n"])));
+var Styles$1 = styled.div(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral(["\n    position: absolute;\n    right: 24px;\n    bottom: 24px;\n    background: #010418;\n    padding: 20px;\n    overflow: hidden;\n    border: 2px solid #3C2857;\n    border-radius: 8px;\n    box-sizing: border-box;\n"])));
 function Minimap(props) {
   var container = useRef();
   var _useElementSize = useElementSize(),
