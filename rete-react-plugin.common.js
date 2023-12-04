@@ -967,7 +967,9 @@ function MiniViewport(props) {
 }
 
 var _templateObject$1;
-var Styles$1 = styled__default["default"].div(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral__default["default"](["\n    position: absolute;\n    right: 24px;\n    bottom: 24px;\n    background: #010418;\n    padding: 20px;\n    overflow: hidden;\n    border: 2px solid #3C2857;\n    border-radius: 8px;\n    box-sizing: border-box;\n"])));
+var Styles$1 = styled__default["default"].div(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral__default["default"](["\n    position: absolute;\n    right: 24px;\n    bottom: 24px;\n    background: #010418;\n    padding: 20px;\n    overflow: hidden;\n    border: 2px solid #3C2857;\n    border-radius: 8px;\n    box-sizing: border-box;\n    transition: transform 0.5s ease;\n    transform: ", ";\n"])), function (props) {
+  return props.customTranslate;
+});
 function Minimap(props) {
   var container = React.useRef();
   var _useElementSize = useElementSize(),
@@ -977,12 +979,31 @@ function Minimap(props) {
   var scale = function scale(v) {
     return v * containerWidth;
   };
+  var _React$useState = React__namespace.useState(''),
+    _React$useState2 = _slicedToArray__default["default"](_React$useState, 2),
+    translate = _React$useState2[0],
+    setTranslate = _React$useState2[1];
+  var panelMode = localStorage.getItem('panel');
   var ref = React.useCallback(function (node) {
     container.current = node;
     containerRef(node);
   }, [containerRef]);
+  React__namespace.useEffect(function () {
+    switch (panelMode) {
+      case 'normal':
+        setTranslate('translateX(calc(100% - 24rem))');
+        break;
+      case 'expand':
+        setTranslate('none');
+        break;
+      case 'shrink':
+        setTranslate('none');
+        break;
+    }
+  }, [panelMode]);
   return /*#__PURE__*/React__namespace.createElement(Styles$1, {
     size: props.size,
+    customTranslate: translate,
     style: {
       width: px(props.size * props.ratio),
       height: px(props.size)
