@@ -933,6 +933,7 @@ function MiniNode(props) {
       width: px(props.width),
       height: px(props.height)
     },
+    className: "minimap-node",
     "data-testid": "minimap-node"
   });
 }
@@ -955,6 +956,7 @@ function MiniViewport(props) {
     };
   });
   return /*#__PURE__*/React__namespace.createElement(MiniViewportStyles, {
+    id: "minimap-viewport",
     onPointerDown: drag.start,
     style: {
       left: px(scale(props.left)),
